@@ -5,7 +5,7 @@ Lê os arquivos 'formulario.html' e 'resultado.html' diretamente do disco.
 
 Como rodar no seu computador:
 1. python3 servidor.py
-2. Abra no navegador: http://localhost:3000
+2. Abra no navegador: http://localhost:8000
 """
 from http.server import HTTPServer, BaseHTTPRequestHandler
 import urllib.parse
@@ -13,7 +13,7 @@ import os
 import sys
 from calculadora import calcular
 
-PORT = 3000
+PORT = 8000
 if "--port" in sys.argv:
     try:
         idx = sys.argv.index("--port")
