@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora em Python</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #090d16;
+      color: #f1f5f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 1rem;
+    }
+    .card {
+      background: #111827;
+      border: 1px solid #1f2937;
+      padding: 2rem;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+    }
+    h1 {
+      font-size: 1.3rem;
+      margin-top: 0;
+      text-align: center;
+      color: #38bdf8;
+    }
+    p.sub {
+      font-size: 0.8rem;
+      color: #94a3b8;
+      text-align: center;
+      margin-top: -0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    label {
+      font-size: 0.85rem;
+      color: #94a3b8;
+      display: block;
+      margin-top: 1rem;
+      margin-bottom: 0.35rem;
+    }
+    input, select, button {
+      width: 100%;
+      padding: 0.75rem;
+      border-radius: 8px;
+      border: 1px solid #374151;
+      background: #030712;
+      color: #fff;
+      font-size: 1rem;
+    }
+    input:focus, select:focus {
+      outline: none;
+      border-color: #38bdf8;
+    }
+    button {
+      background: #0284c7;
+      border: none;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    button:hover {
+      background: #0369a1;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Calculadora em Python</h1>
+    <p class="sub">Operações Básicas (+, -, *, /)</p>
+    
+    <form method="POST" action="/calcular">
+      <label for="num1">Primeiro Número:</label>
+      <input type="number" step="any" id="num1" name="num1" required placeholder="Ex: 10">
+
+      <label for="op">Operação:</label>
+      <select id="op" name="op">
+        <option value="+">+ Adição (Soma)</option>
+        <option value="-">- Subtração</option>
+        <option value="*" selected>* Multiplicação</option>
+        <option value="/">/ Divisão</option>
+      </select>
+
+      <label for="num2">Segundo Número:</label>
+      <input type="number" step="any" id="num2" name="num2" required placeholder="Ex: 5">
+
+      <button type="submit">Calcular com Python</button>
+    </form>
+  </div>
+</body>
+</html>
